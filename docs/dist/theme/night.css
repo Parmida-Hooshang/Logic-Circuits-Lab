@@ -13,7 +13,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 :root {
-  --r-background-color: #111;
+  --r-background-color: #1c1c1c;
   --r-main-font: Open Sans, sans-serif;
   --r-main-font-size: 40px;
   --r-main-color: #eee;
@@ -32,11 +32,11 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-heading3-size: 1.55em;
   --r-heading4-size: 1em;
   --r-code-font: monospace;
-  --r-link-color: #e7ad52;
-  --r-link-color-dark: rgb(225.2802030457, 153.4573604061, 40.7697969543);
-  --r-link-color-hover: rgb(235.8, 189.4, 116.6);
-  --r-selection-background-color: #e7ad52;
-  --r-selection-color: #fff;
+  --r-link-color: #ffd700;          /* Bright gold/yellow */
+  --r-link-color-dark: #ffcc00;     /* Slightly darker gold */
+  --r-link-color-hover: #ffeb3b;    /* Bright lemon yellow on hover */
+  --r-selection-background-color: #ffd700;
+  --r-selection-color: #111;        /* Dark text on yellow selection */
   --r-overlay-element-bg-color: 240, 240, 240;
   --r-overlay-element-fg-color: 0, 0, 0;
 }
@@ -350,6 +350,27 @@ section.has-light-background, section.has-light-background h1, section.has-light
   color: var(--r-link-color);
 }
 
+.reveal .highlight {
+  color: var(--r-link-color);
+}
+
+.reveal .hline, .ghline, .dhline {
+  height: 4px;
+  margin: 2rem auto;
+  width: 70%;
+  border: none;
+}
+
+.reveal .hline { 
+  background-color: var(--r-link-color); 
+}
+.reveal .ghline { 
+  background: linear-gradient(90deg, transparent, var(--r-link-color), transparent); 
+}
+.reveal .dhline { 
+  background: repeating-linear-gradient(90deg, var(--r-link-color), 
+  var(--r-link-color) 4px, transparent 4px, transparent 8px); 
+}
 /*********************************************
  * PRINT BACKGROUND
  *********************************************/
