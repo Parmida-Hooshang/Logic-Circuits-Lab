@@ -415,6 +415,70 @@ section.has-light-background, section.has-light-background h1, section.has-light
   background: repeating-linear-gradient(90deg, var(--r-link-color), 
   var(--r-link-color) 4px, transparent 4px, transparent 8px); 
 }
+
+/*********************************************
+ * UPDATED / MENU
+ *********************************************/
+
+.overview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 2rem 0;
+}
+.menu-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 15rem; 
+  margin-top: 2rem;
+}
+.menu-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menu-column a {
+  font-size: 1em; 
+  font-weight: 650;
+  letter-spacing: 0.03em; 
+  display: table;
+  margin-bottom: 1px;
+  padding: 5px 0;
+  white-space: nowrap;
+  color: var(--r-main-color); 
+  text-decoration: none;
+}
+.menu-item {
+  text-align: left;
+  justify-content: flex-start;
+  position: relative;
+  display: inline-block;
+  color: var(--r-main-color); 
+  transition: all 0.4s ease;
+}
+.menu-item:hover {
+  animation: textShine 1.5s ease-out infinite;
+  color: var(--r-link-color); 
+}
+@keyframes textShine {
+  0% {
+    text-shadow: 0 0 0 rgba(231, 173, 82, 0); 
+  }
+  50% {
+    text-shadow: 
+      0 0 10px rgba(231, 173, 82, 0.9), 
+      0 0 20px rgba(231, 173, 82, 0.5); 
+  }
+  100% {
+    text-shadow: 0 0 0 rgba(231, 173, 82, 0); 
+  }
+}
+
 /*********************************************
  * PRINT BACKGROUND
  *********************************************/
