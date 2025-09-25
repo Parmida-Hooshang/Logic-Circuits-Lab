@@ -17,6 +17,10 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-main-font: Open Sans, sans-serif;
   --r-main-font-size: 40px;
   --r-main-color: #eee;
+  --r-sec-color: #a0a0a0;
+  --r-question-color: #fbf8e6;
+  --r-answer-color: #b1b0b0;
+  --r-title-color: #fbe986;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
   --r-heading-font: Montserrat, Impact, sans-serif;
@@ -348,6 +352,46 @@ section.has-light-background, section.has-light-background h1, section.has-light
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
   color: var(--r-link-color);
+}
+
+/*********************************************
+ * 
+ *********************************************/
+
+.reveal .cover {
+  text-align: center; 
+  margin-top: 1vh;
+}
+
+.reveal .question {
+  color: var(--r-question-color);
+  text-align: left;
+  font-size: 0.9em; 
+  margin-bottom: 0.4em; 
+  font-weight: 650;
+  letter-spacing: 0.03em; 
+}
+
+.reveal .answer {
+  color: var(--r-answer-color); 
+  text-align: left;
+  font-size: 0.7em;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  margin-left: 0.5em;
+  padding-left: 1em;
+}
+
+.reveal .answer::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: inherit;
+}
+
+.reveal .title {
+  color: var(--r-title-color);
 }
 
 .reveal .highlight {
