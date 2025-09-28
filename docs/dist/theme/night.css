@@ -416,6 +416,25 @@ section.has-light-background, section.has-light-background h1, section.has-light
   var(--r-link-color) 4px, transparent 4px, transparent 8px); 
 }
 
+.img-card {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 
+    0 10px 30px rgba(231, 173, 82, 0.3),
+    0 4px 12px rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--r-link-color);
+  transition: all 0.3s ease;
+  filter: brightness(0.95) contrast(1.1);
+}
+
+.img-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 
+    0 15px 40px rgba(231, 173, 82, 0.4),
+    0 6px 20px rgba(0, 0, 0, 0.6);
+  filter: brightness(1) contrast(1.2);
+}
+
 /*********************************************
  * UPDATED / MENU
  *********************************************/
