@@ -136,8 +136,53 @@
 				</section>
 
 				<section id="comb-1">
-					<h3><span class="title">Combinational</span></h3>
+					<section>
+						<h3><span class="title">Into the Combinational World</span></h3>
+						<div class="ghline"></div>
+						<h4 style="color: #a0a0a0; margin-bottom: 0.5em;">
+								Session 2
+							</h4>
+					</section>
 
+					<section id="combinational intro">
+						<p class="question">What do we call a combinational logic circuit?</p>
+						<p class="fragment answer">The output depends on the <span class="highlight">combination</span> 
+							of inputs at <span class="highlight">a specific point of time</span> with total disregard 
+							to the previous states of the inputs.</p>
+						<img src="images/combinational.jpg" alt="Combinational Circuit (Multiplexer)" class="img-card" style="width: 600px;">
+					</section>
+
+					<section>
+						<p class="question">Logic gates: the building blocks</p>
+						<p class="fragment answer">We use <span class="highlight">ICs</span> 
+							that act as different logic gates we used to draw on paper.</p>
+						<p class="fragment answer">Each IC has a <span class="highlight">map</span> 
+						that tells us the purpose of its pins.</p>
+						<img src="images/ic.jpg" alt="IC" class="img-card" style="width: 400px;">
+					</section>
+
+					<section>
+						<p class="question">ICs and Breadboard</p>
+						<p class="fragment answer">Remember how the rows were connected on the <a href="#/breadboard">breadboard</a>?</p>
+						<p class="fragment answer">If the pins were in the same row, the IC would <span class="highlight">short circuit</span>!</p>
+						<p class="fragment answer">We place the IC on the <span class="highlight">ravine</span> (middle divider) to separates its pins.</p>
+						<img src="images/ic-placement.png" alt="IC" class="fragment img-card" style="width: 400px;">
+					</section>
+
+					<section data-auto-animate>
+						<p class="question">Convention</p>
+						<p class="answer">To simplify debugging, it's best practice to place the IC in a way that it <span class="highlight">points to
+							the power supply</span>.
+						</p>
+						<img data-id="point" src="images/ic-placement2.jpg" alt="IC" class="img-card" style="width: 600px;">
+					</section>
+					
+					<section data-auto-animate>
+						<p class="question">Convention</p>
+						<p class="answer">This way, it's easier to find the desirable <span class="highlight">pins</span>.
+						</p>
+						<img data-id="point" src="images/ic-point-to-the-regulator.png" alt="IC" class="img-card" style="width: 600px;">
+					</section>
 				</section>
 
 				<section id="comb-2">
