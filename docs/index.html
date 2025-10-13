@@ -155,7 +155,7 @@
 					<section>
 						<p class="question">Logic gates: the building blocks</p>
 						<p class="fragment answer">We use <span class="highlight">ICs</span> 
-							that act as different logic gates we used to draw on paper.</p>
+							that act as different logic gates we draw on paper.</p>
 						<p class="fragment answer">Each IC has a <span class="highlight">map</span> 
 						that tells us the purpose of its pins.</p>
 						<p class="fragment answer">You can find these maps in the <a href="#/appendix-7408">appendix</a>.</p>
@@ -183,6 +183,65 @@
 						<p class="answer">This way, it's easier to find the desirable <span class="highlight">pins</span>.
 						</p>
 						<img data-id="point" src="images/ic-point-to-the-regulator.png" alt="IC" class="img-card" style="width: 600px;">
+					</section>
+
+					<section>
+						<p class="question">Time for Action!</p>
+						<p class="answer">Let's implement this simple logic circuit on the breadboard.</p>
+						<img src="images/and_not_or_example.png" alt="simple circuit" class="img-card" style="width: 600px;">
+					</section>
+
+					<section>
+						<p class="question" id="equalities">Quick Review</p>
+						<p class="answer">Remember these gate equalities?</p>
+						<img src="images/eqs.png" alt="equalities" class="img-card" style="width: 500px;">
+					</section>
+
+					<section>
+						<p class="question">Quick Review (cont'd)</p>
+						<p class="answer">And, also remember that you can implement any logic circuit using universal gates, 
+							<span class="highlight">NAND</span> and <span class="highlight">NOR</span>.
+						</p>
+						<p class="answer">For example, you can create a NOT gate using one NAND gate. <span class="highlight">Any other logic gate</span>
+							 can be implement using NAND and NOR as well.
+						</p>
+						<img src="images/neg_with_and.png" alt="NOT" class="img-card" style="width: 500px;">
+					</section>
+
+					<section>
+						<p class="question">Let's get creative!</p>
+						<p class="answer fragment">Finding the minimum number of logic gates to implement a circuit is crucial 
+							when it comes to <span class="highlight">optimization</span>.</p>
+						<p class="answer fragment">Moreover, note that it's often
+							practical to implement logic circuits using only <span class="highlight">universal gates</span>.
+						</p>
+						<p class="question fragment">With that in mind:
+						</p>
+						<p class="answer fragment">Design a logic circuit that behaves like an <span class="highlight">XOR</span> gate.</p>
+						<p class="answer fragment">You can only use <span class="highlight">NAND</span> gates.</p>
+						<p class="answer fragment">Make sure that you use <span class="highlight">as few gates as possible</span>.</p>
+						<p class="question highlight fragment" style="font-size: small;">	Solution on the next slide...</p>
+					</section>
+
+					<section>
+						<p class="question">Solution</p>
+						<p class="answer">If you draw the truth table of XOR, you realize that you can implement it this way:</p>
+						<img src="images/xor_1.png" alt="XOR 1" class="img-card" style="width: 600px;">
+						<p class="answer fragment">Now, use the <a href="#/equalities">equalities</a> and change each gate into <span class="highlight">NAND</span> gates.</p>
+					</section>
+
+					<section>
+						<p class="question">Solution (cont'd)</p>
+						<p class="answer">By substituting the gates, you achieve this circuit:</p>
+						<img src="images/xor_2.png" alt="XOR 1" class="img-card" style="width: 600px;">
+						<p class="answer fragment">But, is it really the <span class="highlight">minimum</span> number of gates?!</p>
+					</section>
+
+					<section>
+						<p class="question">Solution (cont'd)</p>
+						<p class="answer">With a little creativity, you can derive this implementation, which minimizes the number of gates:</p>
+						<img src="images/xor_3.png" alt="XOR 1" class="img-card" style="width: 600px;">
+						<p class="answer fragment">Now, implement this circuit on a <span class="highlight">breadboard</span>.</p>
 					</section>
 				</section>
 
