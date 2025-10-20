@@ -246,8 +246,69 @@
 				</section>
 
 				<section id="comb-2">
-					<h3><span class="title">Combinational</span></h3>
+					<section>
+						<h3><span class="title">Combinational Playground</span></h3>
+						<div class="ghline"></div>
+						<h4 style="color: #a0a0a0; margin-bottom: 0.5em;">
+								Session 3
+							</h4>
+					</section>
 
+					<section>
+						<p class="question">Our plan for this session:</p>
+						<p class="answer fragment">We are going to design and implement <span class="highlight">two logic circuits</span>.</p>
+						<p class="answer fragment">They are two <span class="highlight">essential</span> blocks that are utilized even in complex logic circuits.</p>
+						<p class="answer fragment">Let's have some fun playing with combinational logic!</p>
+						<img src="images/mux.jpg" alt="mux" class="img-card" style="width: 400px;">
+					</section>
+
+					<section>
+						<p class="question">Story Time</p>
+						<p class="answer fragment">There are three mediocre chips working together on a board. 
+							There is a bus using which they can communicate with their manager, the CPU. However, they have to <span class="highlight">share</span> this bus.</p>
+						<p class="answer fragment">As you can expect, these colleagues can never agree on what data (0 or 1) should be transferred through the bus.</p>
+						<p class="answer fragment">They have taken the motherboard's advice and decided to take a poll every time they want to send a bit. This way, everyone is treated fairly...</p>
+					</section>
+
+					<section>
+						<p class="question">Your Task</p>
+						<p class="answer fragment">Design and implement a simple logic circuit that takes their votes and announces what data should be transferred. </p>
+						<p class="answer fragment">More formally, design a <span class="highlight">majority circuit</span> that produces the result based on three input signals.</p>
+						<figure class="fragment">
+							<img src="images/ECC.jpg" alt="ECC" class="img-card" style="width: 400px;">
+							<figcaption class="question highlight fragment" style="font-size: small; text-align: center;">Error-Correcting Memory (ECC RAM) is a real-world application of majority circuits!</figcaption>
+						</figure>
+					</section>
+
+					<section>
+						<p class="question">Solution</p>
+						<img src="images/majority-solution.png" alt="majority" class="img-card fragment" style="width: 600px;">
+					</section>
+
+					<section>
+						<p class="question">Story Time</p>
+						<p class="answer fragment">After plenty of disputes among the colleagues, 
+							the smartest chip finally got a promotion and now has her own brand-new bus. The other two colleagues still need to share the bus, though.</p>
+						<p class="answer fragment">Now that only two chips share the bus, your majority circuit is no longer of use!</p>
+						<p class="answer fragment">After realizing the situation, the manager decides to choose which chip gets to work with the bus at different points of time.</p>
+					</section>
+
+					<section>
+						<p class="question">Your Task</p>
+						<p class="answer fragment">Design a logic circuit that helps the manager dedicate the bus to the desired chip.</p>
+						<p class="answer fragment">More formally, design and implement a <span class="highlight">2-to-1 multiplexer</span> using logic ICs.</p>
+						<p class="answer fragment">Draw the truth table, derive the Sum of Products form, and implement it using logic gates.</p>
+						<figure class="fragment">
+							<img src="images/audio-switcher.jpg" alt="MUX application" class="img-card" style="width: 300px;">
+							<figcaption class="question highlight fragment" style="font-size: small; text-align: center;">You can think of an audio switcher as a multiplexer!</figcaption>
+						</figure>
+					</section>
+
+					<section>
+						<p class="question">Solution</p>
+						<p class="answer fragment"><span class="highlight">SoP: </span>\(C = (A . \overline S) + (B . S)\)</p>
+						<img src="images/multiplexer-solution.png" alt="mux" class="img-card fragment" style="width: 600px;">
+					</section>
 				</section>
 
 				<section id="comb-3">
@@ -317,15 +378,23 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+				mathjax2: {
+					config: 'TeX-AMS_HTML-full',
+					TeX: {
+						Macros: {
+							R: '\\mathbb{R}'
+						}
+					}
+				},
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax2 ]
 			});
 		</script>
 	</body>
